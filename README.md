@@ -3,7 +3,7 @@
 This Docker images provides the
 [official/postgres](https://hub.docker.com/_/postgres/)
 image as base with the mDNS/ZeroConf stack on top. So you can enjoy
-[postgres](https://postgres.me/) while it is accessible by default as
+[postgres](https://www.postgresql.org/) while it is accessible by default as
 *postgres.local*. (Port 5432)
 
 ## Requirements
