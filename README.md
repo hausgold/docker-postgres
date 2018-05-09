@@ -1,8 +1,19 @@
 ![mDNS enabled official/postgres](https://raw.githubusercontent.com/hausgold/docker-postgres/master/docs/assets/project.png)
 
+[![Source Code](https://img.shields.io/badge/source-on%20github-blue.svg)](https://github.com/hausgold/docker-postgres)
+[![Docker Image](https://img.shields.io/badge/image-on%20docker%20hub-blue.svg)](https://hub.docker.com/r/hausgold/postgres/)
+
 This Docker images provides the [official/postgres](https://hub.docker.com/_/postgres/) image as base
 with the mDNS/ZeroConf stack on top. So you can enjoy [postgres](https://www.postgresql.org/) while it
 is accessible by default as *postgres.local*. (Port 5432)
+
+- [Requirements](#requirements)
+- [Getting starting](#getting-starting)
+- [docker-compose usage example](#docker-compose-usage-example)
+- [Host configs](#host-configs)
+- [Configure a different mDNS hostname](#configure-a-different-mdns-hostname)
+- [Other top level domains](#other-top-level-domains)
+- [Further reading](#further-reading)
 
 ## Requirements
 
