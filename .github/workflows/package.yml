@@ -21,8 +21,8 @@ jobs:
         version:
           - latest
           - 14.2
-          - 13.2
-          - 12.3
+          - 13.4
+          - '12.10'
           - 11.8
     steps:
       - name: Prepare the virtual environment
