@@ -8,6 +8,9 @@ This Docker images provides the [official/postgres](https://hub.docker.com/_/pos
 with the mDNS/ZeroConf stack on top. So you can enjoy [postgres](https://www.postgresql.org/) while it
 is accessible by default as *postgres.local*. (Port 5432)
 
+The default user is `postgres` with `postgres` as password. Change this using
+the `POSTGRES_USER` and `POSTGRES_PASSWORD` environment variables.
+
 - [Requirements](#requirements)
 - [Getting starting](#getting-starting)
 - [docker-compose usage example](#docker-compose-usage-example)
