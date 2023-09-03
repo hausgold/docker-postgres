@@ -20,7 +20,7 @@ jobs:
       matrix:
         version:
           - latest
-          - '15.3'
+          - '15.4'
           - '14.7'
     steps:
       - name: Prepare the virtual environment
