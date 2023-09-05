@@ -6,6 +6,9 @@ ENV MDNS_HOSTNAME=postgres.local
 ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=postgres
 
+# Install system certificates for verifications
+RUN apt-get update -yqqq && apt-get install -y ca-certificates
+
 # Configure extra postgres/debian archive repository
 RUN echo 'deb [ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] \
   https://apt-archive.postgresql.org/pub/repos/apt bookworm-pgdg-archive main' \
