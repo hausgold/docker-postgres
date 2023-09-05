@@ -11,6 +11,10 @@ is accessible by default as *postgres.local*. (Port 5432)
 The default user is `postgres` with `postgres` as password. Change this using
 the `POSTGRES_USER` and `POSTGRES_PASSWORD` environment variables.
 
+The [PostGIS](https://postgis.net/) extension is already available at the image
+and can be [installed to a
+database](https://postgis.net/documentation/getting_started/).
+
 - [Requirements](#requirements)
 - [Getting starting](#getting-starting)
 - [docker-compose usage example](#docker-compose-usage-example)
