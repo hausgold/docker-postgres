@@ -1,4 +1,4 @@
-FROM postgres:15.5
+FROM postgres:16.2
 MAINTAINER Hermann Mayer "hermann.mayer@hausgold.de"
 
 # You can change this environment variable on run's with -e
