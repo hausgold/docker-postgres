@@ -16,10 +16,10 @@ RUN echo 'deb [ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] \
 
 # Install system packages
 RUN apt-get update -yqqq && \
-  apt-cache policy postgresql-15-postgis-3 && \
+  apt-cache policy postgresql-16-postgis-3 && \
   apt-get install -y \
     dbus avahi-daemon avahi-utils libnss-mdns supervisor \
-    postgresql-15-postgis-3=3.4.0+dfsg-1.pgdg120+1
+    postgresql-16-postgis-3=3.4.2+dfsg-1.pgdg120+1
 
 # Copy custom scripts
 COPY config/*.sh /usr/local/bin/
