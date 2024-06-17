@@ -21,7 +21,7 @@ jobs:
         version:
           - latest
           - '15.6'
-          - '16.2'
+          - '16.3'
     steps:
       - name: Prepare the virtual environment
         uses: hausgold/actions/ci@master
