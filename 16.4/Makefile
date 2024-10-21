@@ -44,7 +44,7 @@ all:
 
 build: clean
 	# Build the Docker image
-	@$(TIME) $(DOCKER) build --no-cache -t "$(IMAGE_NAME):dev" .
+	@$(TIME) $(DOCKER) build --no-cache -t "$(IMAGE_URI)" .
 
 test:
 	# Test the built Docker image
@@ -53,13 +53,12 @@ test:
 
 publish:
 	# Push the new Docker image to the registry
-	@$(DOCKER) tag "$(IMAGE_NAME):dev" "$(IMAGE_URI)"
 	@$(call retry,$(TIME) $(SHELL) -c '$(DOCKER) push $(IMAGE_URI)')
 
 shell:
 	# Start an individual test session of the image
-	@$(DOCKER) run --rm -it "$(IMAGE_NAME):dev" bash
+	@$(DOCKER) run --rm -it "$(IMAGE_URI)" bash
 
 clean:
 	# Clean the current development snapshot
-	@$(DOCKER) rmi --force "$(IMAGE_NAME):dev" || true
+	@$(DOCKER) rmi --force "$(IMAGE_URI)" || true
