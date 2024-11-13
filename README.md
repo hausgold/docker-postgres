@@ -41,15 +41,12 @@ The port 5432 is untouched.
 ## docker-compose usage example
 
 ```yaml
-postgres:
-  image: hausgold/postgres
-  environment:
-    # Mind the .local suffix
-    - MDNS_HOSTNAME=postgres.test.local
-  ports:
-    # The ports are just for you to know when configure your
-    # container links, on depended containers
-    - "5432"
+services:
+  postgres:
+    image: hausgold/postgres
+    environment:
+      # Mind the .local suffix
+      MDNS_HOSTNAME: postgres.test.local
 ```
 
 ## Host configs
