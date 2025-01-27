@@ -22,10 +22,6 @@ jobs:
           - latest
           - '17.2'
           - '17.1'
-          - '17.0'
-          - '16.6'
-          - '16.5'
-          - '16.4'
     steps:
       - name: Prepare the virtual environment
         uses: hausgold/actions/ci@master
