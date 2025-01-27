@@ -19,7 +19,7 @@ RUN apt-get update -yqqq && \
   apt-cache policy postgresql-16-postgis-3 && \
   apt-get install -y \
     dbus avahi-daemon avahi-utils libnss-mdns supervisor \
-    postgresql-16-postgis-3=3.5.0+dfsg-1.pgdg120+1
+    postgresql-16-postgis-3=3.5.2+dfsg-1.pgdg120+1
 
 # Copy custom scripts
 COPY config/*.sh /usr/local/bin/
