@@ -1,4 +1,4 @@
-FROM postgres:17.3
+FROM postgres:17.5
 LABEL org.opencontainers.image.authors="containers@hausgold.de"
 
 # You can change this environment variable on run's with -e
