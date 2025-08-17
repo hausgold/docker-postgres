@@ -1,4 +1,4 @@
-FROM postgres:17.4
+FROM postgres:17.6
 LABEL org.opencontainers.image.authors="containers@hausgold.de"
 
 # You can change this environment variable on run's with -e
@@ -11,7 +11,7 @@ RUN apt-get update -yqqq && apt-get install -y ca-certificates
 
 # Configure extra postgres/debian archive repository
 RUN echo 'deb [ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] \
-  https://apt-archive.postgresql.org/pub/repos/apt bookworm-pgdg-archive main' \
+  https://apt-archive.postgresql.org/pub/repos/apt trixie-pgdg-archive main' \
   >> /etc/apt/sources.list.d/pgdg.list
 
 # Install system packages
@@ -19,7 +19,7 @@ RUN apt-get update -yqqq && \
   apt-cache policy postgresql-17-postgis-3 && \
   apt-get install -y \
     dbus avahi-daemon avahi-utils libnss-mdns supervisor \
-    postgresql-17-postgis-3=3.5.2+dfsg-1.pgdg120+1
+    postgresql-17-postgis-3=3.5.2+dfsg-1.pgdg130+1
 
 # Copy custom scripts
 COPY config/*.sh /usr/local/bin/
