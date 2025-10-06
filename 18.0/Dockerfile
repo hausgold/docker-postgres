@@ -1,4 +1,4 @@
-FROM postgres:17.5
+FROM postgres:18.0
 LABEL org.opencontainers.image.authors="containers@hausgold.de"
 
 # You can change this environment variable on run's with -e
@@ -16,10 +16,10 @@ RUN echo 'deb [ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] \
 
 # Install system packages
 RUN apt-get update -yqqq && \
-  apt-cache policy postgresql-17-postgis-3 && \
+  apt-cache policy postgresql-18-postgis-3 && \
   apt-get install -y \
     dbus avahi-daemon avahi-utils libnss-mdns supervisor \
-    postgresql-17-postgis-3=3.6.0+dfsg-1.pgdg13+1
+    postgresql-18-postgis-3=3.6.0+dfsg-1.pgdg13+1
 
 # Copy custom scripts
 COPY config/*.sh /usr/local/bin/
