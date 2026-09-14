@@ -20,7 +20,7 @@ jobs:
       matrix:
         version:
           - latest
-          - '18.4'
+          - '18.6'
     steps:
       - name: Prepare the environment
         uses: hausgold/actions/ci@v2
